@@ -1,4 +1,4 @@
-# Proof-of-LLN
+# Proof-of-Law-Of-Large-Numbers-Using-Python
 import numpy as np
 from numpy.random import randn
 
