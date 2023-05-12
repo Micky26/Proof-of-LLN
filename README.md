@@ -1,25 +1,7 @@
-# Proof-of-Law-Of-Large-Numbers-Using-Python
-import numpy as np
-from numpy.random import randn
+According to the Law of Large Numbers, as the number of trials or observations increases, the average of those trials or observations will converge towards the expected value or true probability.
 
-#Method 1
+In the code, a large number of random variables (N = 10000) are generated using the randn function. The goal is to calculate the proportion of those random variables falling between -1 and 1.
 
-N = 10000                #set the Number of Random Variables to generate.
-x = randn(N)             #declare a variable that generates the Random numbers.
-valid = []               #append all numbers that fall btw -1 and 1.
-for X in x:              #loop over all randomly generated numbers to determine mubers that fall btw -1 and 1 and append to valid.
-    if X > -1 and X < 1:
-        valid.append(X)
-print(len(valid)/N)      #calculate the mean and print.
+By running the code multiple times, you can observe that as N increases, the calculated proportion approaches the expected value, which, in this case, is the true probability of random variables falling between -1 and 1. This provides empirical evidence supporting the Law of Large Numbers.
 
-
-#Method 2
-
-counter = 0             #Initialize a counter that only increases when condition is met.
-N = 10000               #set the Number of Random Variables to generate.
-x = randn(N)            #declare a variable that generates the Random numbers.
-for X in x:             #loop over all randomly generated numbers to determine mubers that fall btw -1 and 1,counter increases when condition met.
-    if X > -1 and X < 1:
-        counter  = counter + 1
-print(counter/N)        #calculate the mean and print.
-
+However, it's important to note that this code alone does not provide a mathematical proof of the Law of Large Numbers. It demonstrates the principle through empirical simulation. To formally prove the Law of Large Numbers, mathematical analysis and statistical theory are required.
